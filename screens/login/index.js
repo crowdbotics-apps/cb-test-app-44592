@@ -10,8 +10,9 @@ const SignUpScreen = ({navigation}) => {
           <Text style={styles.text}>
             Welcome to login screen
           </Text>
-          <Button title="Go to welcome Screen" onPress={()=> navigation.navigate('welcome')}/>
-
+          <Button title="Go to Welcome Screen" onPress={()=>navigation?.navigate('welcome')}/>
+          <Button title="Go to About Screen" onPress={()=>navigation?.navigate('about')}/>
+          <Button title="Go Back" onPress={()=>navigation?.navigate('signUp')}/>
         </View>
      
       </ScrollView>

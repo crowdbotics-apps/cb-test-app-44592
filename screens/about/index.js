@@ -1,19 +1,19 @@
 import React from "react";
-import { View, Text, ScrollView, SafeAreaView, StyleSheet,Button } from "react-native";
+import { View, Text, ScrollView, SafeAreaView, StyleSheet, Button } from "react-native";
 
-const SignUpScreen = ({navigation}) => {
+const About = ({navigation}) => {
   return <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollView}>
         <View style={styles.group} />
         <View style={styles.group}>
           
           <Text style={styles.text}>
-            Welcome to sign up screen
+            Welcome to login screen
           </Text>
-          <Button title="Go to login Screen" onPress={()=>navigation?.navigate('login')}/>
-          <Button title="Go Back" onPress={()=>navigation?.navigate('welcome')}/>
+          <Button title="Go to Welcome Screen" onPress={()=>navigation?.navigate('welcome')}/>  
+          <Button title="Go Back" onPress={()=>navigation?.navigate('login')}/>
         </View>
-        <Text style={styles.footer}>Made with ❤️ by Crowdbotics</Text>
+     
       </ScrollView>
     </SafeAreaView>;
 };
@@ -53,4 +53,4 @@ const styles = StyleSheet.create({
     marginBottom: 20
   }
 });
-export default SignUpScreen;
+export default About;
