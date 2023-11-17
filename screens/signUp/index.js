@@ -8,17 +8,17 @@ import {
   StyleSheet
 } from "react-native"
 
-const WelcomeScreen = ({navigation}) => {
+const SignUpScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollView}>
         <View style={styles.group} />
         <View style={styles.group}>
-          <Image style={styles.logo} source={require("./logo.png")} />
+          
           <Text style={styles.text}>
-            Let's build something amazing together!
+            Welcome to sign up screen
           </Text>
-          <Text >Hello React Native!!</Text>
+
         </View>
         <Text style={styles.footer}>Made with ❤️ by Crowdbotics</Text>
       </ScrollView>
@@ -62,4 +62,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default WelcomeScreen
+export default SignUpScreen
