@@ -1,7 +1,9 @@
 import React from "react";
 import { View, Text, ScrollView, SafeAreaView, StyleSheet, Button } from "react-native";
 
-const About = ({navigation}) => {
+const About = ({
+  navigation
+}) => {
   return <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollView}>
         <View style={styles.group} />
@@ -10,8 +12,8 @@ const About = ({navigation}) => {
           <Text style={styles.text}>
             Welcome to login screen
           </Text>
-          <Button title="Go to Welcome Screen" onPress={()=>navigation?.navigate('welcome')}/>  
-          <Button title="Go Back" onPress={()=>navigation?.navigate('login')}/>
+          <Button title="Go to Welcome Screen" onPress={() => navigation?.navigate('welcome')} />  
+          <Button title="Go Back" onPress={() => navigation?.navigate('login')} />
         </View>
      
       </ScrollView>

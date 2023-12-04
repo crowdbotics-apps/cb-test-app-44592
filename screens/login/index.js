@@ -1,37 +1,21 @@
-import React from "react"
-import {
-  View,
-  Text,
-  ScrollView,
-  SafeAreaView,
-  StyleSheet,
-  Button
-} from "react-native"
+import React from "react";
+import { View, Text, ScrollView, SafeAreaView, StyleSheet, Button } from "react-native";
 
-const SignUpScreen = ({ navigation }) => {
-  return (
-    <SafeAreaView style={styles.container}>
+const SignUpScreen = ({
+  navigation
+}) => {
+  return <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollView}>
         <View style={styles.group} />
         <View style={styles.group}>
           <Text style={styles.text}>Welcome to login screen</Text>
-          <Button
-            title="Go to Welcome Screen"
-            onPress={() => navigation?.navigate("welcome")}
-          />
-          <Button
-            title="Go to About Screen"
-            onPress={() => navigation?.navigate("about")}
-          />
-          <Button
-            title="Go Back"
-            onPress={() => navigation?.navigate("signUp")}
-          />
+          <Button title="Go to Welcome Screen" onPress={() => navigation?.navigate("welcome")} />
+          <Button title="Go to About Screen" onPress={() => navigation?.navigate("about")} />
+          <Button title="Go Back" onPress={() => navigation?.navigate("signUp")} />
         </View>
       </ScrollView>
-    </SafeAreaView>
-  )
-}
+    </SafeAreaView>;
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -67,5 +51,5 @@ const styles = StyleSheet.create({
     fontWeight: 700,
     marginBottom: 20
   }
-})
-export default SignUpScreen
+});
+export default SignUpScreen;

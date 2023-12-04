@@ -1,7 +1,9 @@
 import React from "react";
-import { View, Text, ScrollView, SafeAreaView, StyleSheet,Button } from "react-native";
+import { View, Text, ScrollView, SafeAreaView, StyleSheet, Button } from "react-native";
 
-const SignUpScreen = ({navigation}) => {
+const SignUpScreen = ({
+  navigation
+}) => {
   return <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollView}>
         <View style={styles.group} />
@@ -10,8 +12,8 @@ const SignUpScreen = ({navigation}) => {
           <Text style={styles.text}>
             Welcome to sign up screen
           </Text>
-          <Button title="Go to login Screen" onPress={()=>navigation?.navigate('login')}/>
-          <Button title="Go Back" onPress={()=>navigation?.navigate('welcome')}/>
+          <Button title="Go to login Screen" onPress={() => navigation?.navigate('login')} />
+          <Button title="Go Back" onPress={() => navigation?.navigate('welcome')} />
         </View>
         <Text style={styles.footer}>Made with ❤️ by Crowdbotics</Text>
       </ScrollView>

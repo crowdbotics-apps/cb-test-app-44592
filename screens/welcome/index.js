@@ -1,12 +1,14 @@
-import { Button, Pressable } from "react-native";
+import { Pressable } from "react-native";
 import React from "react";
 import { View, Image, Text, ScrollView, SafeAreaView, StyleSheet } from "react-native";
 
-const WelcomeScreen = ({navigation}) => {
+const WelcomeScreen = ({
+  navigation
+}) => {
   return <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollView}>
         <View style={styles.group} />
-        <Pressable onPress= {()=>navigation?.navigate("signUp")}><View style={styles.group}>
+        <Pressable onPress={() => navigation?.navigate("signUp")}><View style={styles.group}>
           <Pressable><Image style={styles.logo} source={require("./logo.png")} /></Pressable>
           <Text style={styles.text}>
             Let's build something amazing together!
