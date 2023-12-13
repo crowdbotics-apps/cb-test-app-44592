@@ -1,33 +1,31 @@
+import { Pressable } from "react-native"
 import React from "react"
 import {
   View,
+  Image,
   Text,
   ScrollView,
   SafeAreaView,
-  StyleSheet,
-  Button
+  StyleSheet
 } from "react-native"
 
-const SignUpScreen = ({ navigation }) => {
+const WelcomeScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollView}>
         <View style={styles.group} />
-        <View style={styles.group}>
-          <Text style={styles.text}>Welcome to login screen</Text>
-          <Button
-            title="Go to Welcome Screen"
-            onPress={() => navigation?.navigate("welcome")}
-          />
-          <Button
-            title="Go to About Screen"
-            onPress={() => navigation?.navigate("about")}
-          />
-          <Button
-            title="Go Back"
-            onPress={() => navigation?.navigate("signUp")}
-          />
-        </View>
+        <Pressable onPress={() => navigation?.navigate("bottomScreens")}>
+          <View style={styles.group}>
+            <Pressable>
+              <Image style={styles.logo} source={require("./logo.png")} />
+            </Pressable>
+            <Text style={styles.text}>
+              Let's build something amazing together!
+            </Text>
+            <Text>Hello React Native!!</Text>
+          </View>
+        </Pressable>
+        <Text style={styles.footer}>Made with ❤️ by Crowdbotics</Text>
       </ScrollView>
     </SafeAreaView>
   )
@@ -68,4 +66,4 @@ const styles = StyleSheet.create({
     marginBottom: 20
   }
 })
-export default SignUpScreen
+export default WelcomeScreen
