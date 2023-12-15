@@ -48,6 +48,11 @@ target 'cb_test_app_44592' do
     # Pods for testing
   end
 
+# # Add your pods here
+pod 'RCT-Folly', :podspec => '../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec'
+pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+pod 'GoogleSignIn', '~> 7.0.0' # Add this line
+
   post_install do |installer|
     react_native_post_install(
       installer,

@@ -1,30 +1,32 @@
-import { StyleSheet, Dimensions } from "react-native";
+import { StyleSheet, Dimensions } from "react-native"
 
 // Web OAuth client id obtained from google developer console
-const GOOGLE_WEB_CLIENT_ID = "XXXXXX.apps.googleusercontent.com";
+const GOOGLE_WEB_CLIENT_ID =
+  "400742272727-fpk9fsr69unrsunksn123r1ml03cedof.apps.googleusercontent.com"
 // iOS OAuth client id obtained from google developer console
-const GOOGLE_IOS_CLIENT_ID = "YYYYYY.apps.googleusercontent.com";
+const GOOGLE_IOS_CLIENT_ID =
+  "400742272727-q44go8bd5fi17r852li4pai963goq2ht.apps.googleusercontent.com"
 // Apple service id obtained from apple developer account.
-const APPLE_SERVICE_ID = "com.crowdbotics.APP_NAME";
+const APPLE_SERVICE_ID = "com.crowdbotics.APP_NAME"
 
 // URL to redirect to once login is successfull
 const APPLE_REDIRECT_CALLBACK =
-  "https://your-app-here.com/accounts/apple/login/callback/";
+  "https://your-app-here.com/accounts/apple/login/callback/"
 
 // Source link for foreground image
 const LOGO_URL =
-  "https://crowdbotics-slack-dev.s3.amazonaws.com/media/project_component_resources/cb-icon.png";
+  "https://crowdbotics-slack-dev.s3.amazonaws.com/media/project_component_resources/cb-icon.png"
 // Source link for background image
 const BACKGROUND_URL =
-  "https://crowdbotics-slack-dev.s3.amazonaws.com/media/project_component_resources/halfbg.png";
+  "https://crowdbotics-slack-dev.s3.amazonaws.com/media/project_component_resources/halfbg.png"
 
-const { width, height } = Dimensions.get("window");
+const { width, height } = Dimensions.get("window")
 
-const guidelineBaseWidth = 350;
-const guidelineBaseHeight = 680;
+const guidelineBaseWidth = 350
+const guidelineBaseHeight = 680
 
-const scale = (size) => (width / guidelineBaseWidth) * size;
-const scaleVertical = (size) => (height / guidelineBaseHeight) * size;
+const scale = size => (width / guidelineBaseWidth) * size
+const scaleVertical = size => (height / guidelineBaseHeight) * size
 
 const Color = {
   malibu: "#46E1FD",
@@ -35,7 +37,7 @@ const Color = {
   facebook: "#3b5998",
   google: "#4285F4",
   red: "red"
-};
+}
 
 const styles = StyleSheet.create({
   screen: {
@@ -256,7 +258,7 @@ const styles = StyleSheet.create({
     fontSize: 9,
     marginLeft: 12
   }
-});
+})
 
 export default {
   styles: styles,
@@ -267,4 +269,4 @@ export default {
   APPLE_REDIRECT_CALLBACK: APPLE_REDIRECT_CALLBACK,
   BACKGROUND_URL: BACKGROUND_URL,
   LOGO_URL: LOGO_URL
-};
+}

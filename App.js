@@ -27,7 +27,7 @@ const Stack = createStackNavigator()
 
 const getNavigation = modules => {
   const globalOptions = getGlobalOptions()
-  console.log("modules -> ", modules)
+  // console.log("modules -> ", modules)
   const initialRoute =
     globalOptions.initialRoute || (modules[0] && modules[0].value.title)
 
@@ -37,8 +37,8 @@ const getNavigation = modules => {
       const name = mod.value.title
       const Navigator = mod.value.navigator
 
+      console.log("pakage->", pakage)
       const Component = props => {
-        console.log("props-> ", props)
         return (
           <OptionsContext.Provider value={getOptions(pakage)}>
             <Navigator {...props} />
@@ -77,7 +77,7 @@ const getStore = globalState => {
   return configureStore({
     reducer: reducer,
     middleware: getDefaultMiddleware => {
-      console.log("get -->?", getDefaultMiddleware())
+      // console.log("get -->?", getDefaultMiddleware())
       return getDefaultMiddleware()
     }
   })

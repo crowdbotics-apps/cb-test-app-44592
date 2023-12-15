@@ -16,4 +16,4 @@ export function getNavigationScreen(name) {
 
   return name
 }
-console.log("abc", mods)
+// console.log("abc", mods)

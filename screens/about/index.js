@@ -1,24 +1,36 @@
-import React from "react";
-import { View, Text, ScrollView, SafeAreaView, StyleSheet, Button } from "react-native";
+import React, { useContext } from "react"
+import {
+  View,
+  Text,
+  ScrollView,
+  SafeAreaView,
+  StyleSheet,
+  Button
+} from "react-native"
+import { OptionsContext } from "../../options"
 
-const About = ({
-  navigation
-}) => {
-  return <SafeAreaView style={styles.container}>
+const About = ({ navigation }) => {
+  const options = useContext(OptionsContext)
+  console.log("options in about", options)
+  return (
+    <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollView}>
         <View style={styles.group} />
         <View style={styles.group}>
-          
-          <Text style={styles.text}>
-            Welcome to login screen
-          </Text>
-          <Button title="Go to Welcome Screen" onPress={() => navigation?.navigate('welcome')} />  
-          <Button title="Go Back" onPress={() => navigation?.navigate('login')} />
+          <Text style={styles.text}>Welcome to login screen</Text>
+          <Button
+            title="Go to Welcome Screen"
+            onPress={() => navigation?.navigate("welcome")}
+          />
+          <Button
+            title="Go Back"
+            onPress={() => navigation?.navigate("login")}
+          />
         </View>
-     
       </ScrollView>
-    </SafeAreaView>;
-};
+    </SafeAreaView>
+  )
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -54,5 +66,5 @@ const styles = StyleSheet.create({
     fontWeight: 700,
     marginBottom: 20
   }
-});
-export default About;
+})
+export default About

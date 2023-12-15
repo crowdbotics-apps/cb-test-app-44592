@@ -6,6 +6,7 @@ let options = {}
 opts.map(opt => {
   options[opt.package] = opt.value
 })
+// console.log("mdo options->", getOptions("@modules/social-login"))
 export function getOptions(pakage) {
   let target = options[pakage] || {}
   let source = modulesOptions[pakage] || {}
